@@ -1,2 +1,1 @@
-# docs.infodeck.io
-Infodeck docs
+Welcome to the InfoDeck documentation repository.
