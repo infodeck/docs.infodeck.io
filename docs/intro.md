@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 hide_title: true
-sidebar_label: Overview
-title: Overview
+sidebar_label: Getting Started
+title: Getting Started
 slug: /
 tags:
   - documentation
