@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinfodeck_docs=self.webpackChunkinfodeck_docs||[]).push([[8303],{54538:e=>{e.exports=JSON.parse('{"title":"API","slug":"/category/rest/api","permalink":"/category/rest/api","navigation":{"previous":{"title":"Authentication","permalink":"/api/authentication"},"next":{"title":"Get Asset","permalink":"/api/rest/asset-get-asset"}}}')}}]);
