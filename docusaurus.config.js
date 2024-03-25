@@ -178,9 +178,9 @@ const config = {
         },
       ],
       algolia: {
-        apiKey: process.env.ALGOLIA_API_KEY || "123",
-        appId: process.env.ALGOLIA_APP_ID || "123",
-        indexName: "docusaurus-openapi",
+        apiKey: "570633989c7b2d6a95e8e02215f4f46b",
+        appId: "SDBS6AQH84",
+        indexName: "infodeck",
       },
       // announcementBar: {
       //   id: "announcementBar_1",
@@ -197,9 +197,8 @@ const config = {
         docsPluginId: "classic",
         config: {
           api: {
-            specPath: "examples/api.json",
-            downloadUrl:
-              "https://github.com/infodeck/docs.infodeck.io/blob/main/examples/api.json",
+            specPath: "https://app.infodeck.io/api/docs/openapi",
+            downloadUrl: "https://app.infodeck.io/api/docs/openapi",
             outputDir: "docs/api/rest",
             sidebarOptions: {
               groupPathsBy: "tag",
@@ -219,7 +218,6 @@ const config = {
     },
   ],
 };
-
 async function createConfig() {
   const lightTheme = (await import("./src/utils/prismLight.mjs")).default;
   const darkTheme = (await import("./src/utils/prismDark.mjs")).default;

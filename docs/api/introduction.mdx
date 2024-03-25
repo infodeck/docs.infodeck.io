@@ -7,7 +7,14 @@ sidebar_position: 0
 hide_title: true
 --- 
 
-## Introduction
+import ApiLogo from "@theme/ApiLogo";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+import Export from "@theme/ApiExplorer/Export";
+
+<Export url={"https://app.infodeck.io/api/docs/openapi"} proxy={undefined}></Export>
+
+# Introduction
 
 Welcome to the Infodeck.io Developer Documentation!
 This guide will help you get started with integrating our platform into your projects and accessing our APIs
@@ -23,4 +30,35 @@ Before you begin, make sure you have:
 
 If you prefer direct API integration, you can make HTTP requests to our endpoints. Refer to our [API documentation](/docs/rest/api) for  detailed information on endpoints, parameters, and responses.
 
-Happy coding!
+
+## Quickstart with NodeJS
+
+You will need first to get your tokens, and then retrieve the organizationId. Here is how ? 
+```
+async function login(
+  account: string,
+  password: string
+): Promise<Record<string, string>> {
+  const body = {
+    account,
+    password,
+  };
+    const response = await axios.post(
+      "http://app.infodeck.io/api/authentications/tokens",
+      body
+    );
+    const { token, idToken, refreshToken } =  response?.data?.data;
+    return { token, idToken, refreshToken };
+}
+```
+
+Once you have credentials, you can decode the `id_token` to obtain your `organizationId` as follows:
+
+```
+function getOrganization(idToken: string) {
+  const base64Url = idToken.split(".")[1];
+  const jsonPayload = Buffer.from(base64Url, "base64").toString();
+  const { organizationId } = JSON.parse(jsonPayload);
+  return organizationId;
+}
+```
