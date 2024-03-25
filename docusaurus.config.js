@@ -177,9 +177,9 @@ const config = {
         },
       ],
       algolia: {
-        apiKey: process.env.ALGOLIA_API_KEY || "123",
-        appId: process.env.ALGOLIA_APP_ID || "123",
-        indexName: "docusaurus-openapi",
+        apiKey: "570633989c7b2d6a95e8e02215f4f46b",
+        appId: "SDBS6AQH84",
+        indexName: "infodeck",
       },
       // announcementBar: {
       //   id: "announcementBar_1",
@@ -217,7 +217,6 @@ const config = {
     },
   ],
 };
-
 async function createConfig() {
   const lightTheme = (await import("./src/utils/prismLight.mjs")).default;
   const darkTheme = (await import("./src/utils/prismDark.mjs")).default;
