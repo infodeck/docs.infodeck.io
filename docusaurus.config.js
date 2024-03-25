@@ -181,6 +181,10 @@ const config = {
         apiKey: "2c1b88db66d1a09451dc1ac5a81b52e2",
         appId: "SDBS6AQH84",
         indexName: "infodeck",
+        contextualSearch: false,
+        searchParameters: {
+          facetFilters: [],
+        },
       },
       // announcementBar: {
       //   id: "announcementBar_1",
