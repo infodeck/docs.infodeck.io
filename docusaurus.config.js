@@ -178,9 +178,9 @@ const config = {
         },
       ],
       algolia: {
-        apiKey: process.env.ALGOLIA_API_KEY || "123",
-        appId: process.env.ALGOLIA_APP_ID || "123",
-        indexName: "docusaurus-openapi",
+        apiKey: "2c1b88db66d1a09451dc1ac5a81b52e2",
+        appId: "SDBS6AQH84",
+        indexName: "infodeck",
       },
       // announcementBar: {
       //   id: "announcementBar_1",
